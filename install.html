@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>安装雪伞 · Install Xuesan</title>
+<style>
+:root{color-scheme:light;font-family:system-ui,"Microsoft YaHei",sans-serif;color:#233649;background:#edf4fa}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;box-sizing:border-box}
+main{width:min(650px,100%);background:#fff;border:1px solid #d8e4ed;border-radius:22px;padding:30px;box-sizing:border-box;box-shadow:0 18px 50px #18374912}
+header{display:flex;align-items:center;gap:24px}img{width:144px;height:156px;object-fit:contain}h1{margin:0 0 8px;font-size:28px}p{line-height:1.65;margin:12px 0}small{color:#587086}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}a.button,button{border:0;border-radius:10px;padding:13px 18px;text-decoration:none;font:inherit;cursor:pointer;background:#b7273b;color:white}
+button{background:#e9f0f6;color:#233649}.links a{color:#1e5880}.note{border-top:1px solid #e2eaf1;padding-top:16px;font-size:14px}
+</style>
+</head>
+<body><main>
+<header><img src="previews/waving.gif" alt="挥手的雪伞 · Xuesan waving"><div><h1>雪伞 · Xuesan</h1><small>成品桌宠导入 · Finished pet import</small></div></header>
+<p>点击按钮，打开桌面应用的宠物导入流程，再按应用提示完成安装和选用。</p>
+<p>Click the button to open the desktop app's pet import flow. Complete the import and select the pet in the app.</p>
+<div class="actions"><a id="install" class="button" href="#">安装雪伞 / Install Xuesan</a><button id="copy" type="button">复制安装链接 / Copy link</button></div>
+<p class="links"><a href="INSTALL_FOR_GPT.md">给 GPT 的说明 / GPT instructions</a> · <a href="assets/xuesan.png" download>完整 PNG / Full PNG</a> · <a href="assets/xuesan-v1.png" download>网页兼容 PNG / Web PNG</a></p>
+<p id="status" aria-live="polite"></p>
+<div class="note">需要支持 Pets 导入的 ChatGPT / Codex 桌面应用。入口图片来自此 GitHub 仓库；此页面不会收集账户信息或修改配置文件。<br>A compatible desktop app is required. The image comes from this GitHub repository. This page collects no credentials and edits no configuration files.</div>
+</main>
+<script>
+const imageUrl = "https://raw.githubusercontent.com/WMXhy/The-desk-favorite-of-Chat-GPT/main/assets/xuesan.png";
+const installUri = "codex://pets/install?name=" + encodeURIComponent("雪伞") +
+ "&imageUrl=" + encodeURIComponent(imageUrl) +
+ "&description=" + encodeURIComponent("Black-and-red hair, white horns, an ice-blue kimono, and a little red parasol.") +
+ "&spriteVersionNumber=2";
+document.getElementById("install").href = installUri;
+document.getElementById("copy").addEventListener("click", async () => {
+ try {
+  if (!navigator.clipboard) throw new Error("Clipboard unavailable");
+  await navigator.clipboard.writeText(installUri);
+  document.getElementById("status").textContent = "已复制 / Copied";
+ } catch {
+  const input = document.createElement("textarea");input.value = installUri;document.body.appendChild(input);input.select();
+  const copied = document.execCommand("copy");input.remove();
+  document.getElementById("status").textContent = copied ? "已复制 / Copied" : installUri;
+ }
+});
+</script></body></html>

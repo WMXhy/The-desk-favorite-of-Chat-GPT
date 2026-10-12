@@ -1,0 +1,66 @@
+{
+  "bundle_id": "xuesan",
+  "bundle_version": "1.0.0",
+  "default_locale": "zh-CN",
+  "names": {
+    "zh-CN": "雪伞",
+    "en": "Xuesan"
+  },
+  "descriptions": {
+    "zh-CN": "黑红长发与白色双角的和风小伙伴，穿冰蓝和服，带一把小红伞，温柔地陪你工作。",
+    "en": "A gentle companion with black-and-red hair, white horns, an ice-blue kimono, and a little red parasol."
+  },
+  "repository": "https://github.com/WMXhy/The-desk-favorite-of-Chat-GPT",
+  "cell_width": 192,
+  "cell_height": 208,
+  "frames_per_standard_row": [
+    6,
+    8,
+    8,
+    4,
+    5,
+    8,
+    6,
+    6,
+    6
+  ],
+  "look_degrees": [
+    0.0,
+    22.5,
+    45.0,
+    67.5,
+    90.0,
+    112.5,
+    135.0,
+    157.5,
+    180.0,
+    202.5,
+    225.0,
+    247.5,
+    270.0,
+    292.5,
+    315.0,
+    337.5
+  ],
+  "preferred_asset": "v2",
+  "assets": {
+    "v2": {
+      "path": "assets/xuesan.png",
+      "sprite_version": 2,
+      "mime_type": "image/png",
+      "width": 1536,
+      "height": 2288,
+      "bytes": 3673079,
+      "sha256": "635b98f74164276c0bf2a06e9a28b7f0ffc10b32423d39cb33cf5fa4b36b3a0a"
+    },
+    "v1": {
+      "path": "assets/xuesan-v1.png",
+      "sprite_version": 1,
+      "mime_type": "image/png",
+      "width": 1536,
+      "height": 1872,
+      "bytes": 2782279,
+      "sha256": "6a66fea3576f2d2167fc249aa50585f083fbcb9c72aef15682b18f4ff6c26d74"
+    }
+  }
+}

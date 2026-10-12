@@ -1,0 +1,70 @@
+{
+  "idle": {
+    "frames": 6,
+    "width": 192,
+    "height": 208
+  },
+  "running-right": {
+    "frames": 8,
+    "width": 192,
+    "height": 208
+  },
+  "running-left": {
+    "frames": 8,
+    "width": 192,
+    "height": 208
+  },
+  "waving": {
+    "frames": 4,
+    "width": 192,
+    "height": 208
+  },
+  "jumping": {
+    "frames": 5,
+    "width": 192,
+    "height": 208
+  },
+  "failed": {
+    "frames": 8,
+    "width": 192,
+    "height": 208
+  },
+  "waiting": {
+    "frames": 6,
+    "width": 192,
+    "height": 208
+  },
+  "running": {
+    "frames": 6,
+    "width": 192,
+    "height": 208
+  },
+  "review": {
+    "frames": 6,
+    "width": 192,
+    "height": 208
+  },
+  "all-states": {
+    "frames": 57,
+    "width": 192,
+    "height": 208
+  },
+  "idle-jump-idle": {
+    "frames": 17,
+    "width": 192,
+    "height": 208
+  },
+  "look-loop": {
+    "frames": 16,
+    "width": 192,
+    "height": 208
+  },
+  "all-states.mp4": {
+    "codec": "H.264",
+    "width": 384,
+    "height": 256,
+    "fps": 30,
+    "decoded_successfully": true,
+    "bytes": 297275
+  }
+}
